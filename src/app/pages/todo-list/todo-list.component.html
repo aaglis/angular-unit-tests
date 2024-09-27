@@ -1,0 +1,11 @@
+<div class="container">
+  <form #form="ngForm" (ngSubmit)="enviarTarefa()">
+    <label>
+      Nome da Tarefa:
+      <input type="text" name="tarefa" [(ngModel)]="tarefa" required #tarefaControl="ngModel">
+    </label>
+    <button type="submit" [disabled]="!form.valid">Adicionar</button>
+  </form>
+  <p>tarefa é válido?: {{tarefaControl.valid}}</p>
+</div>
+
